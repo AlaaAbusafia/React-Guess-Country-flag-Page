@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import WhatCountry, {QuestionStates} from './components/WhatCountry.js';
+import WhatCountry from './components/WhatCountry';
+import {QuestionStates} from './components/FlagImage';
 import shuffle from 'shuffle-array';
 
 class CountryFlag extends Component {
@@ -18,7 +19,8 @@ class CountryFlag extends Component {
   }
 
   componentDidMount() {
-    fetch("https://restcountries.eu/rest/v2/all")
+      
+    fetch('https://restcountries.eu/rest/v2/all')
       .then(resp => resp.json())
       .then(countries => {
         const correctOption = Math.floor(Math.random() * countries.length);

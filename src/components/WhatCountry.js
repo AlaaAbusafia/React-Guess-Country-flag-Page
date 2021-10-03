@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import FlagImage, {QuestionStates} from './FlagImage';
+import FlagImage, { QuestionStates } from './FlagImage';
 import shuffle from 'shuffle-array';
 
 class WhatCountry extends Component {
