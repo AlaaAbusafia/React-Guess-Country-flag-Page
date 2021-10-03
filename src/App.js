@@ -1,25 +1,22 @@
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import WhatCountry from './components/WhatCountry';
+import worldImg from './images/world.jpeg';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends Component {
+  render() {
+    return (
+      <div className="flag-app">
+        <header
+          className="title-header"
+          style={{ backgroundImage: `url(${worldImg})` }}>
+          <h1 className="title-text">Guess The Country</h1>
+        </header>
+        <WhatCountry />
+      </div>
+    );
+  }
 }
 
 export default App;
